@@ -1,0 +1,62 @@
+
+Recursion
+
+1. Recursion is a case when a functiom calls itself.  It is often used in place of loops.  
+2. It is necessary to have a base case because the function would otherwise always call itself.  A base case finally returns something, and causes all the other "open cases" to close themselves and return something.
+
+Graphs
+
+1. A graph is interconnected nodes; they are like trees except they can contain loops, and the relationships can be directed or undirected.
+2. A graph is different from a tree in that nodes can have "parents" and they are not necessarily directed.
+
+Performance of Different Data Structures
+
+- Python List (Array)/Add-L: O(n)
+- Python List (Array)/Pop-L: O(n)
+- Python List (Array)Pop-R: O(1)
+- Linked List/Index: O(n)
+- Linked List/Search: O(n)
+- Linked List/Add-R: O(n) - depends if there is a tail; if there is a tail, then O(1)
+- Linked List/Add-L: O(1)
+- Linked List/Pop-L: O(1)
+- Linked List/Pop-R: O(n) - even if there is a tail, the tail has to be reassigned, so it would be O(n)
+- Doubly-Linked List/Index: O(n)
+- Doubly-Linked List/Search: O(n)
+- Doubly-Linked List/Add-R: O(1)
+- Doubly-Linekd List/Add-L: O(1)
+- Doubly-Linked List/Pop-L: O(1)
+- Doubly-Linked List/Pop-R: O(1)
+- Queue (as Array)/Add-R: O(1)
+- Queue (as Array)/Pop-L: O(n)
+- Queue (as LL or DLL)/Add-R: O(n) for LL with no tail; O(1) for LL with tail; O(1) for DLL
+- Queue (as LL or DLL)Pop-L: O(1)
+- Stack (as Array, LL, or DLL)/Add-R: O(1); but O(n) for any linked lists without a tail
+- Stack (as Array, LL, or DLL)/Pop-R: O(1)
+- Deque (as DLL)/Add-R: O(1)
+- Deque (as DLL)/Add-L: O(1)
+- Deque (as DLL)/Pop-L: O(1)
+- Deque (as DLL)/Pop-R: O(1)
+
+Full in Runtime and Memory
+
+- Set (Hash Map)/Get: O(1)
+- Set (Hash Map)/Add: O(1)
+- Set (Hash Map)/Delete: O(1)
+- Set (Hash Map)/Iterate: O(n)
+- Set (Hash Map)/Memory: medium
+- Binary Search Tree/Get: O(logn)
+- Binary Search Tree/Add: O(logn)
+- Binary Searh Tree/Delete: O(logn)
+- Binary Search Tree/Iterate: log(n)
+- Binary Search Tree/Memory: a little
+- Tree/Get: O(n)
+- Tree/Add: O(1)
+- Tree/Delete: O(1)
+- Tree/Iterate: O(n)
+- Memory: a little
+
+Sorting
+
+1. The Bubble Sort algorithm starts at the beginning of a list and compares itself with the next item.  The larger number is positioned to the right.  Then the algorithm moves onto the next item in the list to compare with the item next to it and repeats the process.  By the end, the largest item should be to the far right.  The process is repeated up until the largest item at the end of the list.  Each time the process is repeated, the process is stopped at the item that was last sorted to the top.  The result is a sorted list.
+2. The Merge Sort algorithm works from already sorted arrays to make a sorted array.  A list is broken up in half, and then each half is broken in half, and then each quarter is broken in half, so on and so forth, until each resulting list is a one-item list, which we know is sorted.  The sorted lists of one which resulted from the break up of a list of two on either side are merged (for sorted lists can be merged by comparing each item in the list to the other and placing the smaller one to the left of a new list).  The new sorted lists on either side which have a matching sorted list are then merged in similar fashion.  Merging of lists happens up until the final list to be merged is the one left standing.
+3. The Quick Sort algorithm operates using a pivot.  One begins with a list and a pivot is chosen.  All numbers below the pivot are put in a list, all numbers above the pivot are put in another list, and all numbers equalling the pivot are put in a list. The algorithm is then applied to the new lists for all the numbers above the pivot and all the numbers below the pivot.  A new pivot is chosen for each of these lists and new lists are created.  Once the base case is reached (which is a list of one), the list of one is returned.  The final return is made up of an addition of many lists. 
